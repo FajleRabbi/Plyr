@@ -62,8 +62,8 @@ Markup
 home
 -------
 <div class="indigo-custom-vp">
-	<video id="playerHome" class="playerHome" playsinline controls>
-  <source src="http://lilyskitchendev-com.s9dev.uk/wp-content/uploads/2020/11/Friend-of-Lilys.mp4" />
+	<video id="playerHome" class="playerHome" playsinline controls autoplay muted>
+  <source src="https://indigoproductions.co.uk/wp-content/uploads/2020/09/homepage.mp4" />
 </video>
 </div>
 
