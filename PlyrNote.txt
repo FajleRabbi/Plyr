@@ -54,3 +54,17 @@ Activation JS
 	window.player = playerHome;
 
 })(jQuery);
+
+
+
+Markup
+======
+<div class="indigo-custom-vp">
+	<video id="playerHome" class="playerHome" playsinline controls>
+  <source src="http://lilyskitchendev-com.s9dev.uk/wp-content/uploads/2020/11/Friend-of-Lilys.mp4" />
+</video>
+</div>
+
+
+
+
