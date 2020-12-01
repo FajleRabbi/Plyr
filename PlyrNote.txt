@@ -1,0 +1,56 @@
+Custom CSS
+==============
+
+/*Custom player CSS*/
+:root {
+  --plyr-color-main: #51000B;
+  --plyr-font-family:"HKGrotesk Light", Sans-serif;
+  --plyr-control-icon-size: 25px;
+}
+.plyr--full-ui.plyr--video .plyr__control--overlaid {
+	padding: 25px !important;
+}
+.plyr__video-wrapper {
+    z-index: -1 !important;
+}
+.plyr--stopped.plyr__poster-enabled .plyr__poster {
+    z-index: 999 !important;
+}
+
+
+Enqueue CSS & JS
+==================
+wp_enqueue_style( 'plyr-css', '//cdn.plyr.io/3.6.2/plyr.css', false, NEVE_VERSION );
+wp_enqueue_script( 'plyr', '//cdn.plyr.io/3.6.2/plyr.js', array('jquery'), $ver = false, $in_footer = true );
+
+
+
+
+Activation JS
+==============
+;(function($){
+	"use strict";
+
+	jQuery(document).ready(function($){
+		
+	});
+
+
+	// Change the second argument to your options:
+	// https://github.com/sampotts/plyr/#options
+
+	const players = Array.from(document.querySelectorAll('#player')).map(p => new Plyr(p));
+
+	const player = players.map(function(value, index, arr){
+	    captions: {active: true}
+	})
+
+	const playerHome = new Plyr('#playerHome', {
+		captions: {active: true}
+	});
+
+	// Expose player so it can be used from the console
+	window.player = player;
+	window.player = playerHome;
+
+})(jQuery);
